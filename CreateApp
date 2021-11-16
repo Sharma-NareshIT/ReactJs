@@ -1,0 +1,79 @@
+1. Use React JS in Existing Web Application
+2. Create a new React Application using Web Pack [End]
+3. Create a new React Application using Templates
+
+
+Setup Environment for React
+======================
+1. Download and Install a Package Manager 
+	NPM
+	Yarn
+	NuGet
+   Download and Install "Node.js" that will provide "NPM"
+
+            C:\> node  -v
+            C:\> npm -v
+
+
+2. Download and Install  Editor   "Visual Studio Code"
+
+
+3. Download and Install following extensions in VS Code
+
+	- Live Server
+	- vscode-icons
+	- Intellisense for CSS Class Names
+
+
+React Tool Chain
+=============
+ A typical react application requires the following tool chain
+ - Compiler		Babel
+ - Core Library		React
+ - Virtual DOM Library	React-DOM
+ - Web Pack
+ - Rendering Engine / View	Babel
+ - Testing Tools		
+
+
+Using React in Existing Web Application
+===============================
+1. Create a new Web Application
+     - Create a new folder for project
+	"C:\react-web-app"
+     - Open Project folder in Visual Studio Code
+     - Open Terminal
+	 >npm  init  -y
+     - This generates "package.json"
+
+2. Add following folders into project
+	- public	  	: static resources like html, text, images
+	- src		: dynamic resources like .js, ts, css, scss
+
+3. Create a statup page for project
+
+	public\index.html
+
+	<div id="container">  </div>
+
+4. Install following libraries 
+
+	> npm  install  react   --save
+	> npm  install  react-dom  --save
+	> npm  install @babel/standalone  --save
+
+
+5. Link the following files to your Index page  [use from UMD]
+
+	react.development.js
+	react-dom.development.js
+	babel.js
+
+6.  Add script element in head section
+
+	<script type="text/babel>
+	        ReactDOM.render(
+	            "Your Message",
+	            document.getElementById("container")
+	       )
+	</script>
