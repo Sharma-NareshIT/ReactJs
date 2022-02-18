@@ -1,0 +1,152 @@
+What is React?
+Features of React?
+- Virtual DOM
+   DOM, Shadow DOM, Virtual DOM
+- Components
+- Async
+- Modular
+- 3rd Party
+- Speed , Performance
+
+Drawbacks of React
+===============
+- It only about handling UI.
+- Only one way binding
+- Lot of events and references
+- Pace of development
+- Poor document
+- Indexing in SEO
+	                Setup Environment for React
+1. Download and Install Node.js on PC
+           NPM - Package Manager
+           Yarn
+           Bower
+           Grunt
+           RubyGems
+           NuGet
+
+	https://nodejs.org/en/
+
+    C:\> node  -v	 12+
+    C:\> npm  -v	  6+
+
+2. Download and Install  "Visual Studio Code" editor
+      Build, Debug, Test, Deploy
+
+
+3. Install following extensitions into VS Code
+
+     - Live Server
+     - vscode-icons
+     - Intellisense for css class names 
+
+		       React Environment
+		      ===============
+1. You can use react in existing web application.
+2. You can create a separate react application.
+3. React can be used as SPA, PWA [mobile].
+
+	SPA - Single Page Application
+	PWA - Progressive Web Application
+
+
+React in existing web application
+-------------------------------------------
+1. Create a new folder for project
+	
+	D:\react-web-app
+
+2. Open folder in VS Code editor
+
+3. Open Terminal and run the command
+
+	> npm init -y
+     
+    This will generate  "package.json"
+
+4. Add folders
+	- public
+	- src
+
+5. Add files in public
+	- index.html
+	- home.html
+	- react.jpg
+
+Note: To you react in any application you need basic library
+	a) React
+	b) React-DOM
+	c) Babel/Standalone
+
+          react		: It is the core library for react
+          react-dom		: It is to handle virtual DOM.
+          babel/standalone	: It is a compiler for react
+
+          You can get from CDN links 
+          You can download using NPM.
+	
+	<script type="text/javascript">
+                <script type="module">
+                <script type="text/babel">  or  <script type="text/jsx">
+
+
+Ex:
+index.html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web App</title>
+        <style>
+            body {
+                background-color: black;
+            }
+            a{
+                color:white;
+                font-size: 20px;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body align="center">
+        <h2>Web Application</h2>
+        <div>
+            <img src="react.jpg" width="200" height="200">
+        </div>
+        <p>
+            <a href="home.html">React Home</a>
+        </p>
+    </body>
+</html>
+
+home.html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel" >
+            function Title(){
+                return(
+                    <h4>Welcome to React JS - Virtual DOM</h4>
+                )
+            }
+            ReactDOM.render(
+                 <Title />,
+                 document.getElementById("container")
+            );
+        </script>
+    </head>
+    <body align="center">
+        <h2>React Home</h2>
+        <div id="container">
+
+        </div>
+    </body>
+</html>
